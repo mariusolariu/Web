@@ -1,0 +1,79 @@
+<DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+	</head>
+	<script>
+		var my_button;
+		var hoursWorked;
+		var currPara;
+		var totalPara;
+		var totalCharge = 0;
+		//read the hours calculate the charge and add to totalCharge
+		window.addEventListener("load", main, false);
+
+		function main(){
+			document.getElementById("my_button").addEventListener("click", calculate, false);
+			hoursInput =  document.getElementById("hours");
+		
+		/* FIXME: why won't this version work?
+			currPara  = document.getElementById("curr_charge").innerHTML;
+			totalPara = document.getElementById("total_charge").innerHTML;
+		*/		
+	
+			currPara  = document.getElementById("curr_charge");
+			totalPara = document.getElementById("total_charge");
+		
+		}	
+
+		function calculate(){
+//			document.writeln(hoursInput.value);
+				var currentCharge = 2;
+				var hours = hoursInput.value - 3;
+
+					if (hours > 0){ //if there are still hours for which to charge, e.g. the value might be negative
+						if (hours <= 16){
+								currentCharge += hours * 0.5;
+						}else{
+							currentCharge = 10;
+						}
+					}
+
+
+				totalCharge += currentCharge;
+
+			/*
+				currPara = "Current charge: £" + currentCharge;
+				totalPara.innerHTML = "Total charge: £" + totalCharge;
+			*/
+
+				currPara.innerHTML = "Current charge: £" + currentCharge;
+				totalPara.innerHTML = "Total charge: £" + totalCharge;
+
+
+		}
+
+	</script>
+	<body>
+		<form method = "post" action = "#">
+
+			<p>
+				<label> Hours:
+					<input id = "hours"  name = "Hours" type = "text" size = "2"  maxlength = "2" >
+					<input id = "my_button" type = "button" value = "calculate">
+				</label>
+			</p>
+
+			<p id = "curr_charge">
+			</p>
+
+			<p id = "total_charge">
+			</p>
+			
+		</form>
+	</body>
+
+</html>
+

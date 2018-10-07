@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<style type = "text/css">
+			img{
+				position : relative;
+				-webkit-animation: movingimage linear 3s infinite normal;
+				-moz-animation: movingimage linear 3s infinite normal;
+				animation: movingimage linear 3s infinite normal;
+			}
+
+			@-webkit-keyframes movingimage {
+				0% {opacity: 1; left: 0px; top: 0px;}
+				25% {opacity: 1; left: 100px; top: 0px;}
+				50% {opacity: 1; left: 100px; top: 100px;}
+				75% {opacity: 1; left: 0px; top: 100px;}
+				100%{opacity: 1; left: 0px; top: 0px;}
+			}
+			@-moz-keyframes movingimage {
+				0% {opacity: 1; left: 0px; top: 0px;}
+				25% {opacity: 1; left: 100px; top: 0px;}
+				50% {opacity: 1; left: 100px; top: 100px;}
+				75% {opacity: 1; left: 0px; top: 100px;}
+				100%{opacity: 1; left: 0px; top: 0px;}
+			}
+			@keyframes movingimage {
+				0% {opacity: 1; left: 0px; top: 0px;}
+				25% {opacity: 1; left: 100px; top: 0px;}
+				50% {opacity: 1; left: 100px; top: 100px;}
+				75% {opacity: 1; left: 0px; top: 100px;}
+				100%{opacity: 1; left: 0px; top: 0px;}
+			}
+
+		</style>
+	</head>
+		
+	<body>
+		<img src = "red.png" width = "100" height = "100" alt = "Red photo animation"
+		style = "position: relative; left : 100px; top : 100px">
+	</body>
+
+</html>

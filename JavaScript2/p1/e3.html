@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var outputPar;
+			var inputText;
+
+					function toCelsius(){
+						  var fahTemp = inputText.value;
+						  var celsius = 5.0 / 9.0 * (fahTemp - 32); 
+
+						  outputPar.innerHTML = fahTemp + "F converted to Celsius is " + celsius + "C";
+
+					  return;
+					}
+
+					function toFahrenheit(){
+						var celTemp = inputText.value;
+						var fahTemp = 9.0 / 5.0 * celTemp + 32;
+			
+						outputPar.innerHTML = celTemp + "C converted to Fahrenheit is " + fahTemp + "F";
+					
+					  return;
+					}
+
+					function main(){
+						document.getElementById("toCelButton").addEventListener("click", toCelsius, false);
+						document.getElementById("toFahButton").addEventListener("click", toFahrenheit, false);
+						outputPar = document.getElementById("outputPar");	
+						inputText = document.getElementById("degrees_id");
+					}
+		</script>
+	</head>
+
+	<body>
+		<form method = "post" action = "#">
+			
+			<label> Degrees to convert:
+					<input id = "degrees_id" type = "text"  value = "degrees_val">	
+					<input id = "toCelButton" type = "button" value = "Convert to Celsius">
+					<input id = "toFahButton" type = "button" value = "Convert to Fahrenheit">
+			</label>
+
+			<p id = "outputPar">
+			
+			</p>
+		</form>
+	</body>
+
+</html>
+

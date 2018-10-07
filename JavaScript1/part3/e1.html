@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			var n = parseInt(prompt("n:"));
+			var min = Number.MAX_SAFE_INTEGER;			
+
+			for (var i=0; i < n; i++){
+				var x = parseInt(prompt("x = "));
+				
+				if (x < min) min = x;
+			}
+
+			document.writeln("The smallest value is " + min);
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

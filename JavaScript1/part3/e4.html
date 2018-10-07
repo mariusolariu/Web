@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			var p1 = 2.98, p2 = 4.5, p3 = 9.98, p4 = 4.49, p5 = 6.87;
+			var p_prices = [2.98, 4.5, 9.98, 4.49, 6.07];
+			var revenue = [0, 0, 0, 0, 0];
+			do{
+				var p= parseInt(prompt("Enter product number (1-5) (0 to stop)"));
+				var quantity = parseInt(prompt("Quantity sold: "));
+
+				if (p >= 1 && p <= 5) revenue[p] += p_prices[p] * quantity;
+
+
+			}while (p != 0);
+
+		
+			document.writeln("<h1> Product Totals </h1>");
+
+			document.writeln("<table>");
+			document.writeln("<thead> <tr> <th> Product # </th> <th> Total sales </th></tr> </thead>");
+
+			document.writeln("<tbody>");
+ 
+			for (var i=0; i < 5; i++){
+				document.writeln("<tr><td> Product " + (i + 1) + " </td> " + " <td>" + revenue[i] + " </td> </tr>");
+			}
+			
+			document.writeln("</tbody> </table>"); 	
+
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			var item_prices = [239.99, 129.75, 99.75, 350.89];
+			
+			var i = 0;
+			var count = 0;			
+			
+			var gross_sales = 0;
+	
+			while (i < 4){
+				count = parseInt(prompt("Count #"+ i + " = "));
+				
+				gross_sales += item_prices[i] * count;
+				i++;
+			}
+
+			document.writeln(" This salesperson earned £" + ( 200 + ( 9/100 * gross_sales) ) + " this week");
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			var grossPayEmp = new Array(3);
+			var i = 0;
+
+			while (i<3){
+				var employee_name = prompt("Employee name: ");
+				var hours_worked = prompt("Hours: ");
+				var hourly_rate = prompt("H rate: ");
+				var gross_pay = 40 * hourly_rate +  (hours_worked - 40) * (1.5 * hourly_rate);
+
+				document.writeln(employee_name + " " + "Gross Pay: " + gross_pay + "<br/>"); 
+				i++;
+			}
+			
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

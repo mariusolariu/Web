@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var outputPar;			
+			var headCount = 0;
+			var tailCount = 0;
+
+			function main(){
+				outputPar = document.getElementById("outputPar");
+				document.getElementById("flip_id").addEventListener("click", coinTossing, false);
+			}
+
+			function coinTossing(){
+
+				if (flip()) headCount++;
+				else tailCount++;
+
+				outputPar.innerHTML  = "Heads: " + headCount + ";" + "Tails: " + tailCount ;
+			}
+
+			function flip(){
+				var val = Math.random();
+
+				return (val < 0.5) ? 0 : 1;
+			}	
+
+		</script>
+	</head>
+
+	<body>
+		<p>
+			<input id = "flip_id" type = "button" value = "Flip">
+		</p>
+
+		<p id = "outputPar">
+		</p>
+
+	</body>
+
+</html>
+
