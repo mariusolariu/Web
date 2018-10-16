@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var salesPersons = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+			var output;
+			var textInput;
+
+			function main(){
+				document.getElementById("submit").addEventListener("click", computeSalWeek, false);
+				output = document.getElementById("output_id");
+				textInput = document.getElementById("text_id");
+			}
+
+			function computeSalWeek(){
+				var amountWeek = parseInt(textInput.value);
+				var bonus = 9/100 * amountWeek;				
+				
+				var index = parseInt((200 + bonus) / 100) - 2;
+
+				if (index > 8){
+					salesPersons[8]++;
+				}else{
+					salesPersons[index]++;
+				}
+
+				var result = "Number of people who earned salaries in the following ranges:";
+				for (var i = 0; i < salesPersons.length - 1; i++){
+					result += "\n £" + (200 + i * 100) + "-£" + (299 + i * 100) + " " + salesPersons[i];
+				}
+
+					result += "\n £1000 and over  " + salesPersons[8];
+			
+				output.innerHTML = result;	
+
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<form action="#">
+
+			<label> Enter sales amount: </br> </label>
+			<label> £: 
+					<input id="text_id" type="text" value="0">
+					<input id = "submit" type = "submit" value = "Submit">
+			</label>
+			
+		</form>
+		
+		<p>
+			<textarea id = "output_id" type = "text" rows = "10" cols = "60">
+
+			</textarea>
+		<p>
+
+	</body>
+
+</html>
+

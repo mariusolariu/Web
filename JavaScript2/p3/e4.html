@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var output, button;
+			var articles = ["the", "a", "one", "some", "any"];
+			var nouns = ["boy", "girl", "dog", "town", "car"];
+			var verbs = ["drove", "jumped", "ran", "walked", "skipped"];
+			var prepositions = ["to", "from", "over", "under", "on"];
+			
+
+			function main(){
+				output = document.getElementById("output");
+				myButton = document.getElementById("myButton");
+				myButton.addEventListener("click", generateStory, false);
+			}		
+
+			function generateStory(){
+				var outputString = "Once upon a time... \n \n";
+
+				for (var i = 0; i < 20; i++){
+					var r1 = Math.floor(5 * Math.random());
+					var article = articles[r1];
+					article = article.charAt(0).toUpperCase() + article.slice(1);
+
+					outputString += article;
+
+					var r2 = Math.floor(5 * Math.random());
+					outputString += " " + nouns[r2]; 
+
+					var r3 = Math.floor(5 * Math.random());
+					outputString += " " + verbs[r3]; 
+
+					var r4 = Math.floor(5 * Math.random());
+					outputString += " " + prepositions[r4]; 
+
+					var r5 = Math.floor(5 * Math.random());
+					outputString += " " + articles[r5]; 
+
+					var r6 = Math.floor(5 * Math.random());
+					outputString += " " + nouns[r6] + ".\n"; 
+				}
+
+				outputString += "\nTHE END";
+
+				output.innerHTML = outputString;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<p>
+			<textarea id = "output" rows = "25" cols = "50">
+			</textarea>
+		</p>
+
+		<p>
+			<input id = "myButton" type = "button" value = "Generate Short Story">
+		</p>
+
+	</body>
+
+</html>
+

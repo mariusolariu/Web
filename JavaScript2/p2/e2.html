@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			var i = 0;
+			var myArray = [];
+			var j = 0;
+
+			while (i < 10){
+
+				var number = parseInt(prompt("Number:"));
+
+				if ((number >= 10) && (number <= 100)){
+					if (myArray.indexOf(number) == -1){
+						myArray[j++] = number;
+					}
+				}
+				
+				i++;
+			}
+
+			var outputString = "Count of valid elements entered:" + j + "\nResult: ";
+			
+			for (var k = 0; k < j; k++){
+				outputString += myArray[k] + " ";
+			}
+
+			document.writeln("<textarea id = 'output' type = 'text' rows='3' cols='50'>");
+			document.writeln(outputString);
+			document.writeln("</textarea>");
+		</script>
+	</head>
+
+	<body>
+		</textarea>
+		
+	</body>
+
+</html>
+

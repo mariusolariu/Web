@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var fInput, sInput, compareButton, output;
+		
+			function main(){
+				fInput = document.getElementById("firstString");
+				sInput = document.getElementById("secondString");
+				compareButton = document.getElementById("compareButton");
+				output = document.getElementById("output");
+				
+				compareButton.addEventListener("click", compareStrings, false);
+			}			
+
+			function compareStrings(){
+				var string1 = fInput.value;
+				var string2 = sInput.value;
+				
+				if (string1 < string2){
+					output.innerHTML = "String1 precedes lexicographically String2";
+				}else if (string2 < string1){
+					output.innerHTML = "String2 precedes lexicographically String1";
+				}else{
+					output.innerHTML = "Strings are equal";
+				}
+			}
+		
+			
+		</script>
+	</head>
+
+	<body>
+		<form action = "#">
+	
+		<p>
+			<label> Enter first string:
+				<input id = "firstString" type = "text">
+			</label>
+		</p>
+
+		<p>
+			<label> Enter second string:
+				<input id = "secondString" type = "text">
+			</label>
+		</p>
+
+		<p>
+			<input id = "compareButton" type = "button" value = "compare">
+		</p>
+
+		<p>
+			<textarea id = "output" rows = "4" cols = "50"> </textarea>
+		</p>
+
+		</form>
+	</body>
+
+</html>
+

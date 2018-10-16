@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			var myArr = new Array(1000);
+
+			myArr[0] = 0;
+			myArr[1] = 0;
+		
+			for (var i = 2; i < 1000; i++){
+				myArr[i] = 1;
+			}
+
+			for (var i = 2; i < 1000; i++) {
+				
+				
+				if (myArr[i] == 1){
+
+					for (var j = i + 1; j < 1000; j++){
+						
+						if ( j % i == 0) myArr[j] = 0;
+					}
+				}				
+			}
+
+			var primeNCount = 0;
+			var outputString = "The prime numbers are: \n";
+
+			for (var i = 0; i < 1000; i++){
+				if (myArr[i] == 1){
+					 outputString += i + " ";
+					primeNCount++;
+				}
+			}
+
+			document.writeln("The number of prime numbers up to 999 is:" + primeNCount + "\n");
+			document.writeln(outputString);
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
+

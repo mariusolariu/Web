@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var text_input;
+			var button;
+			var output;
+
+
+			function main(){
+				text_input = document.getElementById("text_id");
+				button = document.getElementById("round_b");
+				output = document.getElementById("output");
+			
+				button.addEventListener("click", doRounding, false);
+			}
+
+			function doRounding(){
+				var original = text_input.value;
+				var nearestInt = Math.floor(original);
+				var nearestTenth = Math.floor(original * 10 + 0.5) / 10;
+				var nearestHund = Math.floor(original * 100 + 0.5) / 100;
+				var nearestTh = Math.floor(original * 1000 + 0.5) / 1000;
+
+				var outputSt = "The number is : " + original;
+				outputSt += "\n nearest int:" + Math.floor(original);
+				outputSt += "\n nearest tenth:" + nearestTenth;
+				outputSt += "\n nearest hundredth:" + nearestHund;
+				outputSt += "\n nearest thousandth:" + nearestTh;
+
+				output.innerHTML = outputSt;
+			}
+
+			
+
+		</script>
+	</head>
+
+	<body>
+		<label> Enter number:
+		</label>
+	
+		<p>		
+			<input id = "text_id" type = "text" >
+			<input id = "round_b" type = "button" value = "Round">
+		</p>
+
+		<textarea id="output" rows = "5" cols = "50">
+
+		</textarea>
+	</body>
+
+</html>
+

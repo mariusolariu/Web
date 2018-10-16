@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var nowB, yesterdayB, tenY_B, oneW_B;
+
+			function main(){
+				var c = "click";
+
+				nowB = document.getElementById("nowB");
+				nowB.addEventListener(c, now, false);	
+			
+				yesterdayB = document.getElementById("yesterdayB");
+				yesterdayB.addEventListener(c, yesterday, false);
+
+				tenY_B = document.getElementById("tenY_B");
+				tenY_B.addEventListener(c, tenYearsAgo, false);
+
+				oneW_B = document.getElementById("oneW_B");
+				oneW_B.addEventListener(c, inOneWeek, false);
+
+			}
+
+			function now(){
+				var d = new Date();
+				alert(d.toString());
+			}
+
+			function yesterday(){
+				var todayMilisec = new Date().getTime();
+				var oneDayMilisec = 24 * 60 * 60 * 1000;
+				var yesterdayMilisec = todayMilisec - oneDayMilisec;
+				var yesterday = new Date(yesterdayMilisec);
+
+				alert(yesterday.toString());
+			}
+
+			function tenYearsAgo(){
+				var todayMilisec = new Date().getTime();
+				var tenYears  = 10 * 365 *  24 * 60 * 60 * 1000;
+				var tenYearsMilisec = todayMilisec - tenYears;
+				var tenYearsAgo = new Date(tenYearsMilisec);
+
+				alert(tenYearsAgo.toString());
+			}
+			
+			function inOneWeek(){
+				var todayMilisec = new Date().getTime();
+				var inOneW  = 7 *  24 * 60 * 60 * 1000;
+				var oneWeekM = todayMilisec + inOneW;
+				var oneW = new Date(oneWeekM);
+
+				alert(oneW.toString());
+}
+
+		</script>
+	</head>
+
+	<body>
+		<p>
+			<input id = "nowB" type = "button" value = "Now">
+			<input id = "yesterdayB" type = "button" value = "Yesterday">
+			<input id = "tenY_B" type = "button"  value = "Ten Years Ago">
+			<input id = "oneW_B"  type = "button"  value = "In One Week">
+		</p>
+
+	</body>
+
+</html>
+

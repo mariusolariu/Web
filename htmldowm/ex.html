@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+
+			//look at jquery and passing arguments to events in JavaScript
+			function main(){
+				document.getElementById("butt").addEventListener("click", function() { add(4,5)}, false);
+			}
+
+			function add(x, y){
+				alert(x + y);
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<input id = "butt" type = "button" value = "myButton" />
+	</body>
+
+</html>
+
