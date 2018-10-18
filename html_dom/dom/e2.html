@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+			window.addEventListener("load", main, false);
+			var count = 0;
+			var label;
+
+			function main(){
+				document.getElementById("myButton").addEventListener("click", increment, false);
+				label = document.getElementById("myLabel");
+			}
+
+			function increment(){
+				count++;
+				label.innerHTML = "Count = " + count;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div>
+			<input id = "myButton" type = "button" value = "Increment">
+			<br>
+			<label id = "myLabel"> Count = 0 </label>
+		</div>
+	</body>
+
+</html>
+

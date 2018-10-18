@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+
+		</script>
+	</head>
+
+	<body>
+		<canvas id = "myCanv" width = "500px" height = "500px">
+		</canvas>
+
+		<script>
+			var context = document.getElementById("myCanv").getContext("2d");
+
+			//first circle
+			context.beginPath();
+			context.arc(350, 350, 20, 0, Math.PI * 2);
+			context.strokeStyle = "red";
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 350, 25, 0, Math.PI * 2);
+			context.strokeStyle = "blue";
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 350, 30, 0, Math.PI * 2);
+			context.strokeStyle = "yellow";
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 350, 35, 0, Math.PI * 2);
+			context.strokeStyle = "gray";
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 350, 40, 0, Math.PI * 2);
+			context.strokeStyle = "black";
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 350, 45, 0, Math.PI * 2);
+			context.strokeStyle = "purple";
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 350, 50, 0, Math.PI * 2);
+			context.strokeStyle = "orange";
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 350, 55, 0, Math.PI * 2);
+			context.strokeStyle = "green";
+			context.stroke();
+
+
+		</script>
+	</body>
+
+</html>
+

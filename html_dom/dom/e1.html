@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<style>
+			.highlight {background-color: green;}
+		</style>
+		<script>
+			window.addEventListener("load", main, false);
+
+			function main(){
+				var linksCollection = document.links;
+			
+				var size = linksCollection.length;
+
+				for (var i = 0; i < size; i++){
+					linksCollection[i].setAttribute("class", "highlight");
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<ul>
+			<li><a href="http://www.bbc.co.uk">BBC</a></li>
+			<li><a href="http://www.google.co.uk">Google</a></li>
+			<li><a href="http://www.ebay.co.uk">Ebay</a></li>
+		</ul>
+	</body>
+
+</html>
+

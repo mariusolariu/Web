@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+		<script>
+
+		</script>
+	</head>
+
+	<body>
+		<canvas id = "myCanvas" width = "500" height = "500">
+			Canvas not supported
+		</canvas>
+		
+		<script>
+			var context = document.getElementById("myCanvas").getContext("2d");
+			var gradient = context.createLinearGradient(0, 0, 500, 500);
+			
+			gradient.addColorStop(0, "red");
+			gradient.addColorStop(0.15, "orange");
+			gradient.addColorStop(0.30, "yellow");
+			gradient.addColorStop(0.45, "green");
+			gradient.addColorStop(0.60, "blue");
+			gradient.addColorStop(0.75, "indigo");
+			gradient.addColorStop(0.90, "violet");
+			
+			context.fillStyle = gradient;
+			context.fillRect(0, 0, 500, 500);
+
+		</script>
+	</body>
+
+</html>
+

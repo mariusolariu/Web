@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = “utf-8”>
+		<title> Web Dev </title>
+	</head>
+
+	<body>
+		<canvas id = "myCanvas" width = "525" height = "250"
+			style = "border: 1px solid black;">
+		</canvas>
+			
+			<script>
+				var canvas = document.getElementById("myCanvas");
+				var context = canvas.getContext("2d");
+
+				context.font = "bold 24px serif";
+				context.textBaseline = "top";
+				context.shadowBlur = 6;
+				context.shadowOffsetX = 2;
+				context.shadowOffsetY = 5;
+				context.shadowColor = "gray";
+				context.fillText("HTML5 Canvas", 10, 10);
+			</script>
+	</body>
+
+</html>
+
