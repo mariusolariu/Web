@@ -1,0 +1,6 @@
+.option { color: darkblue }
+.graybg { background-color: #aaaaaa } 
+.whitebg { background-color: #ffffff }  
+.sans { font-family: sans-serif }
+.serif { font-family: serif }
+p { margin: 0; }
