@@ -1,0 +1,16 @@
+<?xml version = "1.0"?>
+<covers>
+	<baseurl>images/</baseurl>
+	<cover>
+		<image>blue-hawaii.jpg</image>
+		<title>Blue Hawaii</title>
+	</cover>
+	<cover>
+		<image>elvis-presley.jpg</image>
+		<title>Elvis Presley</title>
+	</cover>
+	<cover>
+		<image>gi-blues.jpg</image>
+		<title>GI Blues</title>
+	</cover>
+</covers>

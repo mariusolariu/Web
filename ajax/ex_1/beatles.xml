@@ -1,0 +1,21 @@
+<?xml version = "1.0"?>
+<covers>
+	<!-- baseurl represents the folder in which the images are stored in current directory -->
+	<baseurl>images/</baseurl>
+	<cover>
+		<image>help.jpg</image>
+		<title>Help</title>
+	</cover>
+	<cover>
+		<image>please-please-me.jpg</image>
+		<title>Please Please Me</title>
+	</cover>
+	<cover>
+		<image>sgt-pepper.jpg</image>
+		<title>Sgt. Pepper's Lonely Hearts Club Band</title>
+	</cover>
+	<cover>
+		<image>yellow-submarine.jpg</image>
+		<title>Yellow Submarine</title>
+	</cover>
+</covers>

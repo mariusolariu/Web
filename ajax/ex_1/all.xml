@@ -1,0 +1,40 @@
+<?xml version = "1.0"?>
+<covers>
+	<baseurl>images/</baseurl>
+	<cover>
+		<image>blue-hawaii.jpg</image>
+		<title>Blue Hawaii</title>
+	</cover>
+	<cover>
+		<image>elvis-presley.jpg</image>
+		<title>Elvis Presley</title>
+	</cover>
+	<cover>
+		<image>freewheelin.jpg</image>
+		<title>The Freewheelin' Bob Dylan</title>
+	</cover>
+	<cover>
+		<image>gi-blues.jpg</image>
+		<title>GI Blues</title>
+	</cover>
+	<cover>
+		<image>help.jpg</image>
+		<title>Help</title>
+	</cover>
+	<cover>
+		<image>please-please-me.jpg</image>
+		<title>Please Please Me</title>
+	</cover>
+	<cover>
+		<image>sgt-pepper.jpg</image>
+		<title>Sgt. Pepper's Lonely Hearts Club Band</title>
+	</cover>
+	<cover>
+		<image>the-times-they-are-a-changin.jpg</image>
+		<title>The Times They Are a-Changin'</title>
+	</cover>
+	<cover>
+		<image>yellow-submarine.jpg</image>
+		<title>Yellow Submarine</title>
+	</cover>
+</covers>

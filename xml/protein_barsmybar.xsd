@@ -1,0 +1,29 @@
+<?xml version = "1.0"?>
+
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+		xmlns:proteinBar = "urn:uws:marius"
+		targetNamespace = "urn:uws:marius">
+
+	<simpleType name = "cal">
+		<restriction base = "float">
+		</restriction>
+	</simpleType>
+
+	<simpleType name = "g">
+		<restriction base = "float">
+		</restriction>
+	</simpleType>
+
+	<complexType name = "bar">
+		<all>
+			<element name = "energy" type = "proteinBar:cal"/>
+			<element name = "fat" type = "proteinBar:g"/>		
+			<element name = "carbohydrates" type = "proteinBar:g"/>					
+			<element name = "protein" type = "proteinBar:g"/>
+		</all>
+	</complexType>
+
+	<!-- declaration of root element, mars_bar as being of type bar -->
+	<element name = "marsBar" type = "proteinBar:bar"> </element>	
+
+</schema>
